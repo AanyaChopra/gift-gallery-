@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎁 Gift Wishlist | My Wishes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <span>🎁</span>
+                <h1>My Gift Wishlist</h1>
+                <span>✨</span>
+            </div>
+            <p class="tagline">Share what you love ❤️</p>
+        </header>
+
+        <!-- Add Gift Form -->
+        <div class="add-gift">
+            <h3>➕ Add a Gift Idea</h3>
+            <div class="form-group">
+                <input type="text" id="giftName" placeholder="Gift name (e.g., Polaroid Camera)">
+                <input type="text" id="giftPrice" placeholder="Price (e.g., ₹2999)">
+                <input type="text" id="giftLink" placeholder="Link (optional)">
+                <select id="giftPriority">
+                    <option value="high">🔥 High Priority</option>
+                    <option value="medium">⭐ Medium Priority</option>
+                    <option value="low">💭 Low Priority</option>
+                </select>
+                <button id="addGiftBtn">Add to Wishlist ➕</button>
+            </div>
+        </div>
+
+        <!-- Wishlist Stats -->
+        <div class="stats">
+            <div class="stat-card">
+                <span>🎁 Total Gifts</span>
+                <strong id="totalCount">0</strong>
+            </div>
+            <div class="stat-card">
+                <span>💰 Total Value</span>
+                <strong id="totalValue">₹0</strong>
+            </div>
+            <div class="stat-card">
+                <span>✅ Gifted</span>
+                <strong id="giftedCount">0</strong>
+            </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">All 🎁</button>
+            <button class="filter-btn" data-filter="high">🔥 High</button>
+            <button class="filter-btn" data-filter="medium">⭐ Medium</button>
+            <button class="filter-btn" data-filter="low">💭 Low</button>
+            <button class="filter-btn" data-filter="gifted">✅ Gifted</button>
+        </div>
+
+        <!-- Gift Grid -->
+        <div class="gift-grid" id="giftGrid"></div>
+
+        <!-- Message -->
+        <div class="message" id="message"></div>
+
+        <!-- Share Button -->
+        <button class="share-btn" id="shareBtn">📤 Share Wishlist</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

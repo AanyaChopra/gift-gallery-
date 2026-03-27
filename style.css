@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 30px;
+    padding: 2rem;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.logo span {
+    font-size: 2rem;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Add Gift Form */
+.add-gift {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.add-gift h3 {
+    color: #667eea;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.form-group input, .form-group select {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-group button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.form-group button:hover {
+    transform: scale(1.02);
+}
+
+/* Stats */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.stat-card span {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    display: block;
+}
+
+.stat-card strong {
+    font-size: 1.5rem;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Filter Tabs */
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border: 2px solid #667eea;
+    background: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.filter-btn.active {
+    background: #667eea;
+    color: white;
+}
+
+/* Gift Grid */
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.gift-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-left: 4px solid;
+    transition: transform 0.2s;
+}
+
+.gift-card:hover {
+    transform: translateY(-3px);
+}
+
+.gift-card.high {
+    border-left-color: #ff6b6b;
+}
+.gift-card.medium {
+    border-left-color: #ffd93d;
+}
+.gift-card.low {
+    border-left-color: #a8e6cf;
+}
+.gift-card.gifted {
+    opacity: 0.6;
+    background: #f5f5f5;
+}
+
+.gift-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.gift-name {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.gift-priority {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 20px;
+    background: #f0f0f0;
+}
+
+.gift-price {
+    color: #667eea;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.gift-link {
+    font-size: 0.7rem;
+    color: #667eea;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.gift-link:hover {
+    text-decoration: underline;
+}
+
+.gift-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.gift-btn {
+    flex: 1;
+    padding: 6px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.gift-btn.gift {
+    background: #4caf50;
+    color: white;
+}
+
+.gift-btn.delete {
+    background: #ff6b6b;
+    color: white;
+}
+
+.gift-btn.undo {
+    background: #ffd93d;
+    color: #333;
+}
+
+/* Message */
+.message {
+    text-align: center;
+    padding: 1rem;
+    background: #e8f5e9;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.message.show {
+    display: block;
+}
+
+/* Share Button */
+.share-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s;
+}
+
+.share-btn:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
